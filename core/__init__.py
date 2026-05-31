@@ -5,5 +5,4 @@ from .head.heatmap_head_limb_trans import HeatmapHeadLimb
 from .codec.msra_heatmap_limb import MSRAHeatmapLimb
 from .head.heatmap_head_limb_trans_ablation import HeatmapHeadLimb_ablation
 
-from .head.transformer_encoder import TransformerEncoder
 from .head.tokenbase import TokenPose_TB_base
