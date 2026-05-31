@@ -16,9 +16,7 @@ from mmpose.utils.tensor_utils import to_numpy
 from mmpose.utils.typing import (ConfigType, Features, OptConfigType,
                                  OptSampleList, Predictions)
 from mmpose.models.heads.base_head import BaseHead
-from projects.sheep_pose.core.head.get_limb_two_points import get_limb_two_points
 from projects.sheep_pose.core.head.tokenbase import TokenPose_TB_base
-from projects.sheep_pose.core.head.transformer_limb import LimbToKeypointTransformer
 
 OptIntSeq = Optional[Sequence[int]]
 
@@ -114,19 +112,6 @@ class HeatmapHeadLimb_ablation(BaseHead):
         else:
             self.limb_final_layer = nn.Identity()
 
-        # my function
-
-        # self.tokenpose_body = TokenPose_TB_base(feature_size=tokenpose_cfg.feature_size,
-        #                                    patch_size=tokenpose_cfg.patch_size,
-        #                                    num_keypoints=1,  # body mask
-        #                                    dim=tokenpose_cfg.dim,
-        #                                    depth=tokenpose_cfg.depth,
-        #                                    heads=tokenpose_cfg.heads,
-        #                                    mlp_ratio=tokenpose_cfg.mlp_ratio,
-        #                                    heatmap_size=tokenpose_cfg.heatmap_size,
-        #                                    channels=in_channels,
-        #                                    pos_embedding_type=tokenpose_cfg.pos_embedding_type,
-        #                                    apply_init=tokenpose_cfg.apply_init)
         self.tokenpose_point = TokenPose_TB_base(feature_size=tokenpose_cfg.feature_size,
                                            patch_size=tokenpose_cfg.patch_size,
                                            num_keypoints=self.out_channels,
