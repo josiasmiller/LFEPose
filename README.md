@@ -2,7 +2,7 @@
 
 About
 
-A project to identify sheep pose to allow programmers to allow camera streams to be analzyed with custom trained models built for detected sickness and other problems based off of sheep pose.
+A project to identify sheep pose to allow camera streams to be analzyed with custom trained models built for detecting sickness and other problems based off of sheep pose.
 ## 🚀 Installation
 Follow the [MMPose](https://github.com/open-mmlab/mmpose) installation tutorial provided by OpenMMLab.
 
