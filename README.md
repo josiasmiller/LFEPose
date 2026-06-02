@@ -16,7 +16,7 @@ mmpose
         ├── core
         └── sheep_config
 ```
-2.Download the dataset and update the database path in LFEPose-CSP-m.py.
+2. Download the dataset and update the database path in LFEPose-CSP-m.py.
 3. Train and test.
 ```
 python tools/train.py projects/sheep_pose/config/LFEPose-CSP-m.py
