@@ -16,7 +16,8 @@ mmpose
         ├── core
         └── sheep_config
 ```
-2. Train and test.
+2.Download the dataset and update the database path in LFEPose-CSP-m.py.
+3. Train and test.
 ```
 python tools/train.py projects/sheep_pose/config/LFEPose-CSP-m.py
 python tools/test.py projects/sheep_pose/config/LFEPose-CSP-m.py work_dirs/LFEPose-CSP-m/best_coco_AP_epoch_600.pth
